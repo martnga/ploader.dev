@@ -37,7 +37,7 @@ class UploadsController extends Controller
             $uploads->files_path = $fileName;
 	    
 	    if($uploads->save())
-		return $this->response->created();
+		return $fileName + " created";
 	    else
 		return $this->response->error('could_not_save_file', 500);
 	}
